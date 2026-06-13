@@ -1,1 +1,275 @@
-{}
+{
+  "nav": {
+    "menu": "Menu",
+    "categories": "Categories",
+    "allProducts": "All Products",
+    "brands": "Brands",
+    "maintenance": "Maintenance",
+    "searchPlaceholder": "Search for medical equipment...",
+    "account": "My Account",
+    "orders": "My Orders",
+    "notifications": "Notifications",
+    "logout": "Log out",
+    "login": "Log in",
+    "register": "Sign up",
+    "trackOrder": "Track an order"
+  },
+  "home": {
+    "hero": {
+      "title": "Quality medical equipment, delivered across Syria",
+      "subtitle": "Browse new and refurbished medical devices from trusted brands, with fast delivery and expert on-site maintenance.",
+      "shopNow": "Shop now",
+      "requestMaintenance": "Request maintenance"
+    },
+    "perks": {
+      "delivery": { "title": "Nationwide delivery", "desc": "We ship to every governorate in Syria." },
+      "genuine": { "title": "Genuine products", "desc": "Authentic devices from authorized brands." },
+      "maintenance": { "title": "Expert maintenance", "desc": "On-site and remote technical support." }
+    },
+    "categories": "Shop by category",
+    "featured": "Featured products",
+    "brands": "Trusted brands",
+    "viewAll": "View all",
+    "maintenanceCta": {
+      "title": "Need a device repaired?",
+      "desc": "Submit a maintenance request and our technicians will get back to you with a schedule.",
+      "button": "Request maintenance"
+    }
+  },
+  "catalog": {
+    "title": "Products",
+    "resultsFor": "Results for \"{query}\"",
+    "filters": "Filters",
+    "reset": "Reset",
+    "category": "Category",
+    "allCategories": "All categories",
+    "brand": "Brand",
+    "allBrands": "All brands",
+    "condition": "Condition",
+    "conditions": { "new": "New", "used": "Used" },
+    "any": "Any",
+    "price": "Price (USD)",
+    "min": "Min",
+    "max": "Max",
+    "count": "{total} products",
+    "sort": {
+      "newest": "Newest",
+      "priceAsc": "Price: low to high",
+      "priceDesc": "Price: high to low"
+    },
+    "emptyTitle": "No products found",
+    "emptyDesc": "Try adjusting your filters or search."
+  },
+  "product": {
+    "home": "Home",
+    "products": "Products",
+    "condition": { "new": "New", "used": "Used" },
+    "inStock": "In stock",
+    "outOfStock": "Out of stock",
+    "addToCart": "Add to cart",
+    "addedToCart": "Added to cart",
+    "description": "Description",
+    "conditionReport": "Condition report",
+    "specifications": "Specifications",
+    "notFound": "Product not found",
+    "backToProducts": "Back to products"
+  },
+  "brands": {
+    "title": "Brands",
+    "visitWebsite": "Visit website"
+  },
+  "cart": {
+    "title": "Shopping cart",
+    "empty": "Your cart is empty",
+    "emptyTitle": "Your cart is empty",
+    "emptyDesc": "Add some products to get started.",
+    "continueShopping": "Continue shopping",
+    "remove": "Remove",
+    "subtotal": "Subtotal",
+    "summary": "Order summary",
+    "deliveryNote": "Delivery fee is calculated at checkout based on your governorate.",
+    "checkout": "Proceed to checkout",
+    "viewCart": "View full cart"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "shippingDetails": "Shipping details",
+    "fullName": "Full name",
+    "phone": "Phone number",
+    "email": "Email",
+    "governorate": "Governorate",
+    "selectGovernorate": "Select your governorate",
+    "address": "Delivery address",
+    "addressPlaceholder": "Street, building, floor, and any landmarks...",
+    "notes": "Order notes (optional)",
+    "orderSummary": "Order summary",
+    "subtotal": "Subtotal",
+    "delivery": "Delivery",
+    "selectGovFirst": "Select governorate",
+    "total": "Total",
+    "placeOrder": "Place order",
+    "placing": "Placing order...",
+    "errors": {
+      "name": "Please enter your full name",
+      "phone": "Please enter a valid phone number",
+      "email": "Please enter a valid email",
+      "governorate": "Please select a governorate",
+      "address": "Address must be at least 10 characters"
+    }
+  },
+  "confirmation": {
+    "title": "Thank you for your order!",
+    "subtitle": "We've received your order and will contact you shortly to confirm.",
+    "orderNumber": "Order number",
+    "trackHint": "Keep this number to track your order anytime.",
+    "trackOrder": "Track order",
+    "continueShopping": "Continue shopping"
+  },
+  "track": {
+    "title": "Track your order",
+    "subtitle": "Enter your order number and email to see the latest status.",
+    "orderNumber": "Order number",
+    "email": "Email used on the order",
+    "trackButton": "Track order",
+    "notFound": "We couldn't find an order with those details."
+  },
+  "order": {
+    "orderNumber": "Order number",
+    "status": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "preparing": "Preparing",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled",
+      "rejected": "Rejected"
+    },
+    "subtotal": "Subtotal",
+    "delivery": "Delivery",
+    "total": "Total",
+    "downloadInvoice": "Download invoice",
+    "backToOrders": "Back to orders",
+    "notFound": "Order not found"
+  },
+  "maintenance": {
+    "title": "Request maintenance",
+    "subtitle": "Tell us about your device and we'll schedule a technician.",
+    "alreadyHaveRequest": "Already have a request? Track it",
+    "fullName": "Full name",
+    "phone": "Phone number",
+    "email": "Email",
+    "deviceType": "Device type",
+    "devicePlaceholder": "e.g. Ultrasound machine, patient monitor...",
+    "visitType": "Visit type",
+    "visit": { "home": "On-site (home)", "office": "Drop-off (office)" },
+    "description": "Describe the problem",
+    "descPlaceholder": "What's wrong with the device? Any error messages?",
+    "submit": "Submit request",
+    "submitting": "Submitting...",
+    "successTitle": "Request submitted!",
+    "successSubtitle": "Our team will review your request and contact you soon.",
+    "requestNumber": "Request number",
+    "trackRequest": "Track request",
+    "backHome": "Back to home",
+    "trackTitle": "Track maintenance request",
+    "trackSubtitle": "Enter your request number and email to see its status.",
+    "trackButton": "Track request",
+    "trackNotFound": "We couldn't find a request with those details.",
+    "technician": "Technician",
+    "scheduledAt": "Scheduled for",
+    "status": {
+      "pending": "Pending",
+      "assigned": "Assigned",
+      "in_progress": "In progress",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    },
+    "errors": {
+      "name": "Please enter your full name",
+      "phone": "Please enter a valid phone number",
+      "email": "Please enter a valid email",
+      "device": "Please enter the device type",
+      "description": "Please describe the problem (min 10 characters)"
+    }
+  },
+  "auth": {
+    "loginTitle": "Welcome back",
+    "loginSubtitle": "Log in to your MedStore account",
+    "registerTitle": "Create an account",
+    "registerSubtitle": "Join MedStore Syria to track your orders",
+    "continueWithGoogle": "Continue with Google",
+    "or": "or",
+    "email": "Email",
+    "password": "Password",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "phone": "Phone",
+    "optional": "optional",
+    "login": "Log in",
+    "register": "Sign up",
+    "createAccount": "Create account",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "signingIn": "Signing you in...",
+    "errors": {
+      "email": "Please enter a valid email",
+      "password": "Please enter your password",
+      "passwordLen": "Password must be at least 8 characters",
+      "firstName": "Please enter your first name",
+      "lastName": "Please enter your last name"
+    }
+  },
+  "account": {
+    "profile": "Profile",
+    "orders": "Orders",
+    "maintenance": "Maintenance",
+    "notifications": "Notifications",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "logout": "Log out",
+    "items": "items",
+    "noOrders": "No orders yet",
+    "noOrdersDesc": "Your orders will appear here once you place one.",
+    "startShopping": "Start shopping",
+    "noMaintenance": "No maintenance requests",
+    "noMaintenanceDesc": "Your maintenance requests will appear here.",
+    "noNotifications": "No notifications",
+    "noNotificationsDesc": "You're all caught up.",
+    "markAllRead": "Mark all as read"
+  },
+  "about": {
+    "title": "About MedStore Syria",
+    "intro": "We supply hospitals, clinics, and practitioners across Syria with reliable medical equipment.",
+    "values": {
+      "quality": { "title": "Quality first", "desc": "Genuine devices, carefully inspected." },
+      "reach": { "title": "Nationwide reach", "desc": "Delivery to every governorate." },
+      "support": { "title": "Ongoing support", "desc": "Maintenance and technical help." }
+    },
+    "body1": "MedStore Syria was founded to make modern medical equipment accessible and affordable for healthcare providers throughout the country.",
+    "body2": "From diagnostic imaging to patient monitoring, we offer both new and quality refurbished equipment backed by a dedicated maintenance team."
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "We're here to help with orders, products, and maintenance.",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address"
+  },
+  "footer": {
+    "tagline": "Reliable medical equipment and maintenance across Syria.",
+    "shop": "Shop",
+    "allProducts": "All products",
+    "brands": "Brands",
+    "maintenance": "Maintenance",
+    "trackOrder": "Track order",
+    "company": "Company",
+    "about": "About us",
+    "contact": "Contact",
+    "account": "Account",
+    "login": "Log in",
+    "register": "Sign up",
+    "myOrders": "My orders",
+    "rights": "All rights reserved."
+  }
+}

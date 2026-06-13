@@ -44,7 +44,10 @@ apiClient.interceptors.response.use(
       } catch {
         useAuthStore.getState().logout();
         if (typeof window !== "undefined") {
-          window.location.href = "/ar/login";
+          const locale = window.location.pathname.startsWith("/en")
+            ? "en"
+            : "ar";
+          window.location.href = `/${locale}/login`;
         }
       } finally {
         isRefreshing = false;

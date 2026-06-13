@@ -22,8 +22,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "MedStore Syria Website",
-  description: "Staff website for MedStore Syria",
+  title: {
+    default: "MedStore Syria — Medical Equipment Store",
+    template: "%s | MedStore Syria",
+  },
+  description:
+    "Shop new and used medical equipment in Syria. Fast delivery, genuine brands, and on-site maintenance.",
 };
 
 interface LocaleLayoutProps {

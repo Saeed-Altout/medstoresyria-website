@@ -1,19 +1,17 @@
 import apiClient from "./client";
-import type { ApiResponse, User } from "@/types";
+import type { ApiResponse, AuthResponse, LoginDto, RegisterDto, User } from "@/types";
 
-export interface LoginDto {
-  email: string;
-  password: string;
-}
-
-export interface LoginResponse {
-  accessToken: string;
-  user: User;
-}
-
-export const login = async (dto: LoginDto): Promise<LoginResponse> => {
-  const { data } = await apiClient.post<ApiResponse<LoginResponse>>(
+export const login = async (dto: LoginDto): Promise<AuthResponse> => {
+  const { data } = await apiClient.post<ApiResponse<AuthResponse>>(
     "/auth/login",
+    dto,
+  );
+  return data.data;
+};
+
+export const register = async (dto: RegisterDto): Promise<AuthResponse> => {
+  const { data } = await apiClient.post<ApiResponse<AuthResponse>>(
+    "/auth/register",
     dto,
   );
   return data.data;
@@ -21,9 +19,18 @@ export const login = async (dto: LoginDto): Promise<LoginResponse> => {
 
 export const logout = (): Promise<unknown> => apiClient.post("/auth/logout");
 
+export const getMe = async (): Promise<User> => {
+  const { data } = await apiClient.get<ApiResponse<User>>("/auth/me");
+  return data.data;
+};
+
 export const refreshToken = async (): Promise<string> => {
   const { data } = await apiClient.post<ApiResponse<{ accessToken: string }>>(
     "/auth/refresh",
   );
   return data.data.accessToken;
 };
+
+/** Absolute URL to start the Google OAuth flow on the backend. */
+export const googleAuthUrl = (): string =>
+  `${process.env.NEXT_PUBLIC_API_URL ?? ""}/auth/google`;
