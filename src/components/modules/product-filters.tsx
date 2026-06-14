@@ -32,7 +32,7 @@ export function ProductFiltersPanel({
   // Flatten the category tree one level deep for the filter list.
   const flatCategories = (categories ?? []).flatMap((c) => [
     c,
-    ...c.children,
+    ...(c.children ?? []),
   ]);
 
   return (

@@ -11,6 +11,7 @@ import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ProductGrid } from "@/components/modules/product-grid";
+import { CategoryCard } from "@/components/modules/category-card";
 import { useBrands, useCategories, useFeaturedProducts } from "@/lib/hooks/catalog";
 import { useDirection } from "@/hooks/use-direction";
 
@@ -81,19 +82,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
             {categories.slice(0, 6).map((c) => (
-              <Link
-                key={c.id}
-                href={`/categories/${c.slug}`}
-                className="group flex flex-col items-center gap-3 rounded-xl border p-5 text-center transition-colors hover:border-primary hover:bg-accent"
-              >
-                <div className="size-16 overflow-hidden rounded-full bg-muted">
-                  {c.imageUrl && (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={c.imageUrl} alt={c.name} className="size-full object-cover" />
-                  )}
-                </div>
-                <span className="text-sm font-medium">{c.name}</span>
-              </Link>
+              <CategoryCard key={c.id} category={c} />
             ))}
           </div>
         </section>

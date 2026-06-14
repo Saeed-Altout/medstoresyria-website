@@ -2,8 +2,17 @@
 
 import { use, useState } from "react";
 import { useTranslations } from "next-intl";
+import { IconCategory } from "@tabler/icons-react";
 import { Link } from "@/i18n/navigation";
 import { Skeleton } from "@/components/ui/skeleton";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 import {
   Select,
   SelectContent,
@@ -22,6 +31,7 @@ export default function CategoryPage({
 }) {
   const { slug } = use(params);
   const t = useTranslations("catalog");
+  const tNav = useTranslations("product");
   const { data: category, isLoading: loadingCat } = useCategory(slug);
 
   const [sort, setSort] = useState("createdAt:DESC");
@@ -39,6 +49,28 @@ export default function CategoryPage({
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8">
+      <Breadcrumb className="mb-6">
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink asChild>
+              <Link href="/">{tNav("home")}</Link>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbLink asChild>
+              <Link href="/products">{tNav("products")}</Link>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbPage className="line-clamp-1">
+              {category?.name ?? slug}
+            </BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
+
       <div className="mb-6">
         {loadingCat ? (
           <Skeleton className="h-9 w-64" />
@@ -55,14 +87,22 @@ export default function CategoryPage({
       </div>
 
       {/* Subcategories */}
-      {category && category.children.length > 0 && (
+      {category && (category.children?.length ?? 0) > 0 && (
         <div className="mb-6 flex flex-wrap gap-2">
-          {category.children.map((child) => (
+          {category.children?.map((child) => (
             <Link
               key={child.id}
               href={`/categories/${child.slug}`}
-              className="rounded-full border px-4 py-1.5 text-sm hover:border-primary hover:bg-accent"
+              className="flex items-center gap-2 rounded-full border py-1.5 pe-4 ps-1.5 text-sm hover:border-primary hover:bg-accent"
             >
+              <span className="flex size-7 shrink-0 items-center justify-center overflow-hidden rounded-full bg-muted text-muted-foreground">
+                {child.imageUrl ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={child.imageUrl} alt="" className="size-full object-cover" />
+                ) : (
+                  <IconCategory className="size-4" />
+                )}
+              </span>
               {child.name}
             </Link>
           ))}

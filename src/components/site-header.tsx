@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import {
+  IconCategory,
   IconHeartHandshake,
   IconMenu2,
   IconSearch,
@@ -77,8 +78,16 @@ export function SiteHeader() {
                   key={c.id}
                   href={`/categories/${c.slug}`}
                   onClick={() => setMobileOpen(false)}
-                  className="rounded-md px-3 py-2 text-sm hover:bg-accent"
+                  className="flex items-center gap-2.5 rounded-md px-3 py-2 text-sm hover:bg-accent"
                 >
+                  <span className="flex size-7 shrink-0 items-center justify-center overflow-hidden rounded-md bg-muted text-muted-foreground">
+                    {c.imageUrl ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={c.imageUrl} alt="" className="size-full object-cover" />
+                    ) : (
+                      <IconCategory className="size-4" />
+                    )}
+                  </span>
                   {c.name}
                 </Link>
               ))}
