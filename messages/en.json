@@ -72,7 +72,40 @@
     "conditionReport": "Condition report",
     "specifications": "Specifications",
     "notFound": "Product not found",
-    "backToProducts": "Back to products"
+    "backToProducts": "Back to products",
+    "relatedProducts": "You might also like",
+    "share": "Share",
+    "linkCopied": "Link copied to clipboard",
+    "noReviewsYet": "No reviews yet",
+    "onlyLeft": "Only {count} left in stock",
+    "noDescription": "No description available.",
+    "noSpecifications": "No specifications listed for this product.",
+    "tabs": {
+      "description": "Description",
+      "specifications": "Specifications",
+      "reviews": "Reviews"
+    },
+    "delivery": {
+      "nationwide": "Nationwide delivery across Syria",
+      "genuine": "Genuine, authorized products",
+      "maintenance": "Expert maintenance & support"
+    }
+  },
+  "reviews": {
+    "write": "Write a review",
+    "yourRating": "Your rating",
+    "name": "Your name",
+    "email": "Your email",
+    "reviewTitle": "Title (optional)",
+    "yourReview": "Your review",
+    "submit": "Submit review",
+    "ratingRequired": "Please select a rating",
+    "nameError": "Please enter your name",
+    "emailError": "Please enter a valid email",
+    "bodyError": "Review must be at least 10 characters",
+    "count": "{count} reviews",
+    "verifiedPurchase": "Verified purchase",
+    "empty": "Be the first to review this product."
   },
   "brands": {
     "title": "Brands",

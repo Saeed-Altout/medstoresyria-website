@@ -102,6 +102,36 @@ export interface ProductDetail extends ProductListItem {
     name: string;
     parent_id: string | null;
   } | null;
+  rating_average?: number;
+  rating_count?: number;
+}
+
+// ─── Reviews ──────────────────────────────────────────────────────────────────
+
+export interface Review {
+  id: string;
+  rating: number;
+  title: string | null;
+  body: string;
+  author_name: string;
+  is_verified_purchase: boolean;
+  is_approved: boolean;
+  created_at: string;
+}
+
+export interface ReviewSummary {
+  average: number;
+  count: number;
+  breakdown: Record<"1" | "2" | "3" | "4" | "5", number>;
+}
+
+export interface CreateReviewDto {
+  productId: string;
+  rating: number;
+  title?: string;
+  body: string;
+  author_name: string;
+  author_email: string;
 }
 
 export interface Category {

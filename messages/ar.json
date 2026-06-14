@@ -72,7 +72,40 @@
     "conditionReport": "تقرير الحالة",
     "specifications": "المواصفات",
     "notFound": "المنتج غير موجود",
-    "backToProducts": "العودة إلى المنتجات"
+    "backToProducts": "العودة إلى المنتجات",
+    "relatedProducts": "قد يعجبك أيضاً",
+    "share": "مشاركة",
+    "linkCopied": "تم نسخ الرابط",
+    "noReviewsYet": "لا توجد تقييمات بعد",
+    "onlyLeft": "بقي {count} فقط في المخزون",
+    "noDescription": "لا يوجد وصف متاح.",
+    "noSpecifications": "لا توجد مواصفات مدرجة لهذا المنتج.",
+    "tabs": {
+      "description": "الوصف",
+      "specifications": "المواصفات",
+      "reviews": "التقييمات"
+    },
+    "delivery": {
+      "nationwide": "توصيل لكل المحافظات في سوريا",
+      "genuine": "منتجات أصلية ومعتمدة",
+      "maintenance": "صيانة ودعم احترافي"
+    }
+  },
+  "reviews": {
+    "write": "اكتب تقييماً",
+    "yourRating": "تقييمك",
+    "name": "اسمك",
+    "email": "بريدك الإلكتروني",
+    "reviewTitle": "العنوان (اختياري)",
+    "yourReview": "تقييمك",
+    "submit": "إرسال التقييم",
+    "ratingRequired": "يرجى اختيار تقييم",
+    "nameError": "يرجى إدخال اسمك",
+    "emailError": "يرجى إدخال بريد إلكتروني صحيح",
+    "bodyError": "يجب أن يكون التقييم 10 أحرف على الأقل",
+    "count": "{count} تقييم",
+    "verifiedPurchase": "شراء موثّق",
+    "empty": "كن أول من يقيّم هذا المنتج."
   },
   "brands": {
     "title": "العلامات التجارية",

@@ -27,8 +27,13 @@ export const getFeaturedProducts = async (): Promise<ProductListItem[]> => {
 export const getProductBySlug = async (
   slug: string,
 ): Promise<ProductDetail> => {
-  const { data } = await apiClient.get<ApiResponse<ProductDetail>>(
-    `/products/${slug}`,
-  );
-  return data.data;
+  const { data } = await apiClient.get<
+    ApiResponse<ProductDetail & { attributeValues?: ProductDetail["attributes"] }>
+  >(`/products/${slug}`);
+  const raw = data.data;
+  // Backend serializes specs as `attributeValues`; the app uses `attributes`.
+  return {
+    ...raw,
+    attributes: raw.attributes ?? raw.attributeValues ?? [],
+  };
 };
